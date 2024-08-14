@@ -5,7 +5,7 @@ import { useGlobalContext } from "../context";
 import { LinkComponent, SocialComponent } from "../utils/links";
 import image from "../assets/cartoon.png";
 const Navbar = () => {
-  const { openSidebar } = useGlobalContext();
+  const { openSidebar,setCurrentMenu } = useGlobalContext();
 
   return (
     <nav>
@@ -15,7 +15,7 @@ const Navbar = () => {
             <img src={image} alt="bash" width="40" height="40" />
           </div>
         </Link>
-        <LinkComponent classLink="menu" />
+        <LinkComponent classLink="menu"/>
         <p align="right">
           <SocialComponent classSocial={"socialIcons"} />
         </p>

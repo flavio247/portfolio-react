@@ -1,21 +1,25 @@
-import HomeScreen from './screen/HomeScreen';
+import HomeScreen from "./screen/HomeScreen";
+import AboutScreen from "./screen/AboutScreen";
+import SkillsScreen from "./screen/SkillsScreen";
+import ProjectsScreen from "./screen/ProjectsScreen";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import './App.css';
-import  Navbar  from "./components/Navbar";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <Router className='App'>
+    <Router className="App">
       <Navbar />
       {/* <Sidebar /> */}
       <Routes>
-        <Route path='/' element={<HomeScreen />} />
-        {/* <Route path='/about' element={<AboutScreen />} />
-        <Route path='/contattaci' element={<ContactScreen />} />
-        <Route path='/cocktail/:id' element={<SingleCocktailScreen />} />
-        <Route path='*' element={<ErrorScreen />} /> */}
+        <Route path="/" element={<HomeScreen />} />
+        <Route path="/about" element={<AboutScreen />} />
+        <Route path="/skills" element={<SkillsScreen />} />
+        <Route path="/projects" element={<ProjectsScreen />} />
+        {/*<Route path='*' element={<ErrorScreen />} /> */}
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </Router>
   );
 }

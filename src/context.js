@@ -1,40 +1,26 @@
 import { useState, useContext, createContext } from "react";
-
+import useLoading from "./useLoading";
 
 const AppContext = createContext("");
 
 const AppProvider = ({ children }) => {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const [currentMenu, setMenu] = useState("Home");
+  const [time, setTime] = useState(1000);
+  const { isLoading } = useLoading(time);
 
-  //SIDEBAR FUNCTIONS
-  const openSidebar = () => {
-    setIsSidebarOpen(true);
+  const setCurrentMenu = (menu) => {
+    setMenu(menu);
   };
-
-  const closeSidebar = () => {
-    setIsSidebarOpen(false);
+  const setCurrentLoading = (time) => {
+    setTime(time);
   };
-
-  //Aggiorno lo state con la posizione in cui ho cliccato sulla ricetta
-  const getScrollPosition = (value) => {
-    setScrollPosition(value);
-  };
-
-  //Imposto state dello scroll position a 0
-  const deleteScrollPosition = () => {
-    setScrollPosition(0);
-  };
-
   return (
     <AppContext.Provider
       value={{
-        isSidebarOpen,
-        openSidebar,
-        closeSidebar,
-        getScrollPosition,
-        deleteScrollPosition,
-        scrollPosition,
+        isLoading,
+        setCurrentLoading,
+        setCurrentMenu,
+        currentMenu
       }}
     >
       {children}

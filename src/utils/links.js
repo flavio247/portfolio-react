@@ -8,33 +8,47 @@ import {
   FaYoutubeSquare,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useGlobalContext } from "../context";
 
 const links = [
   {
     url: "/",
     text: "Home",
+    interval: 1500
   },
   {
     url: "/about",
     text: "About",
+    interval: 2500
   },
   {
     url: "/skills",
     text: "Skills",
+    interval: 3000
   },
   {
     url: "/projects",
     text: "Projects",
+    interval: 3500
   },
 ];
 
 const LinkComponent = ({ classLink }) => {
+  const { setCurrentMenu, currentMenu, setCurrentLoading } = useGlobalContext();
+
   return (
     <ul className={classLink}>
       {links.map((link) => {
         return (
           <li>
-            <Link key={link.text} to={link.url}>
+            <Link
+              key={link.text}
+              to={link.url}
+              onClick={() => {setCurrentMenu(link.text);setCurrentLoading(link.interval);}}
+              style={{
+                color: currentMenu === link.text ? "#4070f4" : "#0e2431",
+              }}
+            >
               {link.text}
             </Link>
           </li>
