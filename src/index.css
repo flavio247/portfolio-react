@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #f0f8ff;
 }
 
 code {
@@ -130,7 +132,7 @@ nav.sticky .menu-btn {
 
 /* home section styling */
 .home {
-  height: 90vh;
+  height: 92vh;
   width: 100%;
   background: #f0f8ff;
   background-size: cover;
@@ -141,7 +143,7 @@ nav.sticky .menu-btn {
 .home .home-content {
   width: 90%;
   height: 100%;
-  margin: auto;
+  margin-left: 20%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -255,6 +257,7 @@ section .title span::after {
 }
 .about {
   background: #f0f8ff;
+  height: 93vh;
 }
 
 .about .about-details .left {
@@ -304,6 +307,7 @@ section .button button:hover {
 /* My Skills CSS */
 .skills {
   background: #f0f8ff;
+  height: 93vh;
 }
 .skills .content {
   padding: 40px 0;
@@ -380,9 +384,6 @@ section .button button:hover {
     }
   }
 
-@media only screen and (min-width: 1900px) {
-  
-}
 .services .boxes .box:hover {
   background: #4070f4;
 
@@ -392,7 +393,7 @@ section .button button:hover {
   cursor: pointer;
 }
 .services .boxes .pharma:hover {
-  background-image: url("./assets/iqmed project.png");
+  background-image: url("./assets/medical project.png");
 }
 .services .boxes .tax:hover {
   background-image: url("./assets/1.png");
@@ -486,8 +487,8 @@ footer .text span a:hover {
     height: 400px;
     float: right;
     position: absolute;
-    top: 150px;
-    left: 700px;
+    top: 180px;
+    left: 55%;
   }
 /* Responsive Media Query */
 @media (max-width: 1190px) {

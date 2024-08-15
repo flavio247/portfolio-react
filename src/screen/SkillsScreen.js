@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import useTitle from "../useTitle";
 import Hero from "../components/Hero";
-import { useGlobalContext } from "../context";
 import image from "../assets/skills.png";
 
 const SkillsScreen = () => {

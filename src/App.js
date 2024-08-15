@@ -11,13 +11,11 @@ function App() {
   return (
     <Router className="App">
       <Navbar />
-      {/* <Sidebar /> */}
       <Routes>
         <Route path="/" element={<HomeScreen />} />
         <Route path="/about" element={<AboutScreen />} />
         <Route path="/skills" element={<SkillsScreen />} />
         <Route path="/projects" element={<ProjectsScreen />} />
-        {/*<Route path='*' element={<ErrorScreen />} /> */}
       </Routes>
       <Footer />
     </Router>

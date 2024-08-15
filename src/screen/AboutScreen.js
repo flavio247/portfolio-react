@@ -1,14 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import useTitle from "../useTitle";
 import Hero from "../components/Hero";
-import { useGlobalContext } from "../context";
 import image from "../me.jpg";
+import cv from "../Flavio-Gallizia.pdf";
 // import { Link } from "react-router-dom";
 const AboutScreen = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-
   useTitle("ABOUT");
 
   return (
@@ -35,7 +31,7 @@ const AboutScreen = () => {
               <br />
             </p>
             <div className="button">
-              <a href="Flavio-Gallizia.pdf">
+              <a href={cv} without rel="noopener noreferrer" target="_blank">
                 <button>Download CV</button>
               </a>
             </div>

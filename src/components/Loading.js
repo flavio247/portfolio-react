@@ -4,15 +4,7 @@ const Loading = () => {
   return (
     <div className="loading-position">
       <div className="lds-roller">
-        <img src={loading} height="250px" width="250px"></img>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <img src={loading} height="250px" width="250px" alt="loading..."></img>
       </div>
     </div>
   );

@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import useTitle from "../useTitle";
 import Hero from "../components/Hero";
 import image from "../assets/cartoon.png";
-// import { Link } from "react-router-dom";
-const HomeScreen = () => {
-  
 
+const HomeScreen = () => {
   useTitle("HOME");
 
   return (

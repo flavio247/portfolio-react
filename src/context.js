@@ -14,13 +14,17 @@ const AppProvider = ({ children }) => {
   const setCurrentLoading = (time) => {
     setTime(time);
   };
+  const numberRandom = () => {
+    return Math.random() * 2500;
+  };
   return (
     <AppContext.Provider
       value={{
         isLoading,
         setCurrentLoading,
         setCurrentMenu,
-        currentMenu
+        currentMenu,
+        numberRandom
       }}
     >
       {children}

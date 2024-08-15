@@ -1,14 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import useTitle from "../useTitle";
 import Hero from "../components/Hero";
-import { useGlobalContext } from "../context";
-import image from "../me.jpg";
-// import { Link } from "react-router-dom";
-const ProjectsScreen = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
 
+const ProjectsScreen = () => {
   useTitle("PROJECTS");
 
   return (
