@@ -80,5 +80,16 @@ const SocialComponent = ({ classSocial }) => {
     </>
   );
 };
+const PortfolioComponent = ({children,url}) => {
+  return (
+    
+          <Link key="1" to={url}>
+            {children}
+          </Link>
+        );
+      
+    
+  
+};
 
-export { LinkComponent, SocialComponent };
+export { LinkComponent, SocialComponent,PortfolioComponent };

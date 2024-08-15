@@ -371,11 +371,17 @@ section .button button:hover {
   height: 400px;
   text-align: center;
   border-radius: 12px;
-  padding: 30px 10px;
+  padding: 40px 10px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
   cursor: default;
   transition: all 0.4s ease;
   background-color: #fff;
+}
+.services .boxes a{
+  width: 48%;
+}
+.services .boxes a .box{
+  width: 100%;
 }
 
   @media only screen and (min-width: 1800px) {
@@ -401,7 +407,11 @@ section .button button:hover {
 .services .boxes .tax2:hover {
   background-image: url("./assets/2.png");
 }
-
+.services .boxes .portfolio-react:hover {
+  background-image: url("./assets/portfolio-react.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .services .boxes .box .icon {
   /* background: #4070f4; */
   background: transparent;

@@ -1,6 +1,7 @@
 import React from "react";
 import useTitle from "../useTitle";
 import Hero from "../components/Hero";
+import { PortfolioComponent } from "../utils/links";
 
 const ProjectsScreen = () => {
   useTitle("PROJECTS");
@@ -42,6 +43,15 @@ const ProjectsScreen = () => {
               company that markets biomedical products
             </p>
           </div>
+
+          <PortfolioComponent
+            url={"https://github.com/flavio247/portfolio-react"}
+          >
+            <div className="box portfolio-react">
+              <div className="topic">My Portfolio developed in React</div>
+              <p>Click here and goto Github repository</p>
+            </div>
+          </PortfolioComponent>
         </div>
       </Hero>
     </>
